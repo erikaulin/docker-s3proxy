@@ -1,0 +1,6 @@
+*.p12
+*.pem
+*.csr
+*.cert
+*.DS_Store
+nginx-s3proxy-task-def.json
