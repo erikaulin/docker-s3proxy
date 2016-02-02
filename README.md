@@ -34,7 +34,7 @@ Proxy to S3 with front htpasswd and SSL domain specific certificates.
 #### Update nginx source:
 
     http://wiki.nginx.org/Install#Building_Nginx_From_Source
-    tar -zxvf nginx-<VERSION>.tar docker-nginx-s3proxy/ngx_source
+    tar -zxvf nginx-<VERSION>.tar docker-s3proxy/ngx_source
 
 ## Maintainers
 
