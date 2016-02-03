@@ -3,4 +3,7 @@
 *.csr
 *.cert
 *.DS_Store
+*.htpasswd
+config/*.crt
+config/*.key
 nginx-s3proxy-task-def.json
