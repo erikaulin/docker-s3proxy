@@ -58,10 +58,8 @@ RUN cd /root/ngx_source \
 COPY config/ep-v0.0.4-linux /usr/local/bin/ep
 COPY config/nginx.conf /etc/nginx/nginx.conf
 COPY config/mime.types /etc/nginx/mime.types
-COPY config/ustwo-it.crt /etc/nginx/certs/ustwo-it.crt
-COPY config/ustwo-it.key /etc/nginx/certs/ustwo-it.key
-COPY config/ustwo-com.crt /etc/nginx/certs/ustwo-com.crt
-COPY config/ustwo-com.key /etc/nginx/certs/ustwo-com.key
+COPY config/example.com.crt /etc/nginx/certs/example.com.crt
+COPY config/example.com.key /etc/nginx/certs/example.com.key
 
 # Use HTTP Authentication
 COPY .htpasswd /etc/nginx/.htpasswd
