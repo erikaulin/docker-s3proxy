@@ -28,6 +28,7 @@ Proxy to S3 with front htpasswd and SSL domain specific certificates.
       -e S3PROXY_BUCKET_NAME="S3BUCKET" \
       -e S3PROXY_AWS_ACCESS_KEY="AWSKEY" \
       -e S3PROXY_AWS_SECRET_KEY="AWSSECRET" \
+      -e S3PROXY_REGION="REGION" \
       -p 443:443 \
       -d s3proxy
 
