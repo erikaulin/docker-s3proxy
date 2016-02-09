@@ -1,7 +1,6 @@
 # Nginx based AWS S3 proxy with Authentication
 
-Proxy to S3 with front htpasswd and SSL domain specific certificates.
-
+Proxy to S3 with htpasswd file in front
 ### Usage
 
 #### Clone this repo:
@@ -12,11 +11,6 @@ Proxy to S3 with front htpasswd and SSL domain specific certificates.
 
     htpasswd -c .htpasswd USERNAME
 
-#### SSL cert
-
-    Place your domain .crt and .key file in config folder.
-    Rename if needed to ex. example.com.crt and example.com.key
-
 #### Build Local image:
 
     docker build -t s3proxy .
@@ -24,12 +18,11 @@ Proxy to S3 with front htpasswd and SSL domain specific certificates.
 ##### Start Container
 
     docker run --name s3proxy \
-      -e DOMAIN="example.com" \
       -e S3PROXY_BUCKET_NAME="S3BUCKET" \
       -e S3PROXY_AWS_ACCESS_KEY="AWSKEY" \
       -e S3PROXY_AWS_SECRET_KEY="AWSSECRET" \
       -e S3PROXY_REGION="REGION" \
-      -p 443:443 \
+      -p 80:80 \
       -d s3proxy
 
 #### Update nginx source:
